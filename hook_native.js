@@ -1,4 +1,3 @@
-// frida -U -f com.ford.oa.ap -l hook_native.js --no-pause
 function hook_native() {
     var opendir_addr = Module.findExportByName(null, 'opendir');
     Interceptor.attach(opendir_addr, {
